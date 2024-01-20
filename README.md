@@ -1,6 +1,6 @@
 # Recommendation Systems Movie
 
-![family_movie](Images/family_movie.jpeg)
+![family_movie](images/family_movie.jpeg)
 
 You pick the movie, I'll choose the restaurant...
 
@@ -20,12 +20,12 @@ To execute this project, a github repository is utilized for public viewing and 
 You can see the following files stored in the github repository.
 
 * *PDFs* - Folder containing pdf files below 
-    * [Presentation.pdf](pdfs/movie_recommendations_systems_presentation)`Movie Recommendations Systems Presentation` - Non-technical presentation of the Analysis
-    * [Movie Recommendation Systems Notebook.pdf](pdfs/movie_recommendations_systems_notebook)`Movie Recommendation Systems Analysis` - complete Jupyter Python Notebook in pdf formF
+    * [Presentation](pdfs/Presentation.pdf)`Movie Recommendations Systems Presentation` - Non-technical presentation of the Analysis
+    * [Movie Recommendation Systems Notebook](pdfs/Notebook.pdf)`Movie Recommendation Systems Analysis` - complete Jupyter Python Notebook in pdf form
             
 * *Images* - Folder containing the image files used in the Notebook, Presentation, and README file
 
-* *data* - Folder containg the source data files
+* *data* #data - Folder containg the source data files
     * [links.csv](data/links.csv)
     * [movies.csv](data/movies.csv)
     * [ratings.csv](data/ratings.csv)
@@ -33,14 +33,14 @@ You can see the following files stored in the github repository.
 
 * [README](README.md) the currently file you're reading with descriptions about the coding file
 
-* [.gitignore](.gitignore.txt)*.gitignore.txt* - git ignore file 
+* [.gitignore](.gitignore.txt) - git ignore file 
 
-* [Movie Recommendation Systems Notebook](movie_recommendation_system.ipynb)*movie_recommendation_system.ipynb* - Notebook with Python analysis
+* [Movie Recommendation Systems Notebook](movie_recommendation_system.ipynb) - Notebook with Python analysis
 
 ## 4. Data Approach
 
 ### The Data
-The program gets a user to rate five random movies from an existing database, and then returns five recommendations. It utlizes an existing database, [the source Data](pdfs/movie_recommendations_systems_presentation), as described below, containing movie ratings (0-5) on thousands of movies from hundreds of users. The approach relies on the model's ability to predict how any user would rate any movie. The `surprise` module was used to implement this recommendation system.
+The program gets a user to rate five random movies from an existing database, and then returns five recommendations. It utlizes an existing database, [the source Data](#data), as described below, containing movie ratings (0-5) on thousands of movies from hundreds of users. The approach relies on the model's ability to predict how any user would rate any movie. The `surprise` module was used to implement this recommendation system.
 
 The approach can be summarized as followed.
 
@@ -50,18 +50,17 @@ Step 3: Add users rating to the existing database
 Step 4: Use the model from step 1 to predict the new users movie ratings for all movies in the database and sort highest to lowest 
 Step 5: Output the top 5 recommendations 
 
-#### Source Data 
-
-This project uses the Movielens dataset from the [GroupLens](https://grouplens.org/datasets/movielens/latest/research) lab at the University of Minnesota, which can be found in in the `data` folder in this GitHub repository. 
+#### Source Data
+This project uses the Movielens dataset from the [GroupLens](https://grouplens.org/datasets/movielens/) lab at the University of Minnesota, which can be found in in the `data` folder in this GitHub repository. 
 
 The website notes that "This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from MovieLens, a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9,742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018. Users were selected at random for inclusion. All selected users had rated at least 20 movies. No demographic information is included. Each user is represented by an id, and no other information is provided."
 
 The data are contained in the following files:
 
-[links.csv](data/links.csv)
-[movies.csv](data/movies.csv)
-[ratings.csv](data/ratings.csv)
-[tags.csv](data/tags.csv)
+* [links.csv](data/links.csv)
+* [movies.csv](data/movies.csv)
+* [ratings.csv](data/ratings.csv)
+* [tags.csv](data/tags.csv)
 
 
 ## 5. Modeling
@@ -78,10 +77,10 @@ The method with the lowest RMSE (0.859) was a user-based, SVD with tuned hyperpa
 ## 6. Sample Input/Output
 
 Some input
-![input](Images/input.png)
+![input](images/input.png)
 
 Output
-![output](Images/output.png)
+![output](images/output.png)
 
 
 
