@@ -40,9 +40,9 @@ You can see the following files stored in the github repository.
 ## 4. Data Approach
 
 ### The Data
-The program gets a user to rate five random movies from an existing database, and then returns five recommendations. It utlizes an [existing database](#data), as described above, containing movie ratings (0-5) on thousands of movies from hundreds of users. The approach relies on the model's ability to predict how any user would rate any movie. The `surprise` module was used to implement this recommendation system.
+The program gets a user to rate five random movies from an existing database, and then returns five recommendations. It utilizes an [existing database](#data), as described above, containing movie ratings (0-5) on thousands of movies from hundreds of users. The approach relies on the model's ability to predict how any user would rate any movie. The `surprise` module was used to implement this recommendation system.
 
-The approach can be summarized as followed.
+The approach can be summarized as follows:
 
 Step 1: Prior to input from the new user, we created user-based collaborative filtering prediction model to predict how an existing user would rate a movie from the database. A few different models were attempted, but a model-based, single value decompisition method was selected.
 Step 2: Prompt user to rate five movies.
