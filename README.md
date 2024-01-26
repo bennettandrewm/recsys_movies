@@ -33,7 +33,7 @@ You can see the following files stored in the github repository.
             
 * [README](README.md) the currently file you're reading with descriptions about the coding file
 
-* [.gitignore](.gitignore.txt) - git ignore file 
+* [.gitignore](.gitignore) - git ignore file 
 
 * [Movie Recommendation Systems Notebook](movie_recommendation_system.ipynb) - Notebook with Python analysis
 
