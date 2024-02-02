@@ -36,11 +36,7 @@ You can see the following files stored in the github repository.
 ## 4. Data Approach
 
 ### Overview
-The program asks a user to rate five random movies from an existing database, and then returns five recommendations. It utilizes the [ratings.csv](data/ratings.csv) file from the [Movielens 100K ratings](#data) database containing movie ratings (0.5-5) on thousands of movies from hundreds of users. The program uses a collaborative filtering model - no content-based or hybrid filtering was performed. Specifically, it relies on the model's ability to predict how any user would rate any movie. The `surprise` module is well suited for explicit ratings system with collaborative filter and was used for this project.
-
-### Collaborative Filtering
-Collaborative Filtering was used to
-
+The program asks a user to rate five random movies from an existing database, and then returns five recommendations. It utilizes the [ratings.csv](data/ratings.csv) file from the [Movielens 100K ratings](#data) database containing movie ratings (0.5-5) on thousands of movies from hundreds of users. The program uses a collaborative filtering model - no content-based or hybrid filtering was performed. Specifically, it relies on the model's ability to predict how any user would rate any movie. The `surprise` module is well suited for explicit ratings system. With data on over 600 users and 9700 movies, collaborative filtering is an appropriate choice.
 
 ### Source Data 
 This project uses the Movielens dataset from the [GroupLens](https://grouplens.org/datasets/movielens/) lab at the University of Minnesota, which can be found in in the [`data`](#data) folder in this GitHub repository. 
@@ -77,7 +73,7 @@ At a minimum, we wanted our model to beat (ie have a lower RMSE) than two random
 After that, we utilized the `surpise` method to test SVD with GridSearch, KNNBasic, and KNNBaseline. KNNBasic and KNNBaseline hyperparameters were tested manually, alternating between pearson/cosine similarities and user/item based filtering.
 
 ### Cross-Validation and Hypertuning
-Cross-validation was performed using testsets for each algorithm tested. Additional 5-fold cross-validation (default hyperparameters) ws performed on the SVD model utilizing the CVGridSearch function in `surprise`. 
+Cross-validation was performed using testsets for each algorithm tested. We used 5-fold cross-validation (default hyperparameters) during hypertuning of the SVD model, using the CVGridSearch function in `surprise`. Actual 
 
 ### Best Results
 The method with the lowest RMSE (0.855) was a user-based, SVD with tuned hyperparameters {n_factors=150, n_epochs=25, lr_all=0.010, reg_all=0.05}. The KNN_baseline algorithm had a the next lowest RMSE utilizing similarity metric of pearson correlation coefficient and user-based filtering. 
